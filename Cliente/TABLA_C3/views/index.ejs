@@ -1,0 +1,30 @@
+<body>
+  <div class="header">
+      <h1>Tabla de Datos de Tráfico</h1>
+  </div>
+  <div class="container">
+      <table>
+          <thead>
+              <tr>
+                  <th>IP</th>
+                  <th>Subida</th>
+                  <th>Bajada</th>
+                  <th>Fecha y Hora</th>
+              </tr>
+          </thead>
+          <tbody>
+              <% trafficData.forEach((data) => { %>
+                  <tr>
+                      <td><%= data.ip %></td>
+                      <td><%= data.upload_count %> bytes</td>
+                      <td><%= data.download_count %> bytes</td>
+                      <td><%= data.timestamp %></td>
+                  </tr>
+              <% }); %>
+          </tbody>
+      </table>
+  </div>
+  <div class="footer">
+      <p>Hecho por mí</p>
+  </div>
+</body>
